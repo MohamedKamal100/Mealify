@@ -1,0 +1,97 @@
+@media (max-width: 1024px) {
+  nav .nav-links {
+    flex-direction: column;
+    transform: translateX(100%);
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    column-gap: 15px;
+    background-color: #fff;
+    border-left: 2px solid #f1f1f1;
+    right: 0;
+    top: 0;
+    z-index: 9999999999;
+    transition: all 400ms;
+  }
+
+  .nav-links .close-icon {
+    display: block;
+    padding: 10px 15px 5px;
+  }
+
+  .nav-links a:not(.active):hover::before {
+    width: 0px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: var(--block-gap) 10px;
+  }
+
+  .nav-links a::before {
+    bottom: 2px;
+  }
+
+  .mode-group {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-content .btn-group {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 992px) {
+  header .container {
+    flex-direction: column-reverse;
+  }
+  header .container > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .gallery-photos {
+    height: auto;
+  }
+  .gallery-photos picture {
+    width: calc(calc(100% - var(--gap)) / 2);
+  }
+  .contact .input input {
+    width: 100%;
+  }
+  footer .container :is(.about, .touch) {
+    width: calc(100% / 2.1);
+    order: 1;
+  }
+
+  footer .container :is(.subscribe) {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chefs-cards .card {
+    width: 100%;
+  }
+
+  .gallery-photos picture {
+    width: 100%;
+  }
+  .gallery-photos {
+    height: auto;
+  }
+  .contact .contact-info > * {
+    width: 100%;
+  }
+  footer :is(.about, .touch, .subscribe) {
+    width: 100%;
+    order: 0;
+  }
+}
